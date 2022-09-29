@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/45e1bea2cc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images\logobg.png" class="logo">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#con">play</a></li>
+          <li><a href="#singer">Singer</a></li>
+          <li><a href="#topartist">Top Artist</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <h1> <span>Music</span> is a medicine of <span>Mind</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- con -->
+  <section id="con">
+    <div class="main">
+      <p id="logo"><i class="fa fa-music"></i>Music</p>
+
+      <!-- show_song_number -->
+      <div class="show_song_no">
+        <p id="present">1</p>
+        <p>/</p>
+        <p id="total">5</p>
+      </div>
+
+
+      <!--- left part --->
+      <div class="left">
+
+        <!--- song img --->
+        <img id="track_image">
+        <div class="volume">
+          <p id="volume_show">90</p>
+          <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+          <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+        </div>
+
+      </div>
+
+      <!--- right part --->
+      <div class="right">
+        <!--- song title & artist name --->
+        <div class="song_detail">
+          <p id="title">title.mp3</p>
+          <p id="artist">Artist name</p>
+        </div>
+
+        <!--- middle part --->
+        <div class="middle">
+          <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+          <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+          <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+        </div>
+
+        <!--- song duration part --->
+        <div class="duration">
+          <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+          <button id="auto" onclick="autoplay_switch()">Auto &nbsp;<i class="fa fa-circle-o-notch"
+              aria-hidden="true"></i></button>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- -------singer----- -->
+
+  <div id="singer">
+    <div class="container">
+      <h1 class="sub-title">Singer</h1>
+      <div class="services-list">
+        <div class="pic1">
+          <h2>sherya Goshal</h2>
+          <p></p>
+        </div>
+        <div class="pic2">
+
+        </div>
+        <div class="pic3">
+          <h2>darshan raval</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium blanditiis aspernatur, saepe
+            quibusdam perspiciatis ipsum vero minima quam. Praesentium, neque. Enim est neque tempora praesentium at?
+            Quisquam iste quis ea!</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------topartist------------- -->
+
+  <div id="topartist">
+    <div class="container">
+      <h1 class="sub-title">Top Artist</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/ArijitSadSongs_20211117063136.jpg">
+          <div class="layer">
+            <h3>Arjit sing</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, culpa. Molestiae, cupiditate adipisci.
+              Fuga mollitia dolore praesentium in ad nobis nam necessitatibus eius atque maxime! Accusantium facere
+              harum fugit eum..</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/Neha_Kakkar_006_20200822042626_500x500.jpg">
+          <div class="layer">
+            <h3>Neha kakkar</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis dolore, quasi molestiae dolorem veniam
+              tempora. In asperiores eveniet libero quo doloremque nemo quia distinctio! Explicabo dignissimos enim vero
+              a libero.</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/Armaan_Malik_003_20220107135753_500x500.jpg">
+          <div class="layer">
+            <h3>Armaan malik</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum hic natus consequatur quidem perferendis
+              laboriosam soluta, vitae dolore minima eum veniam placeat error, aliquid quae ratione ipsum iusto nemo
+              nesciunt!</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+  <!-- --------------contact------------ -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-sharp fa-solid fa-paper-plane"></i>contact@example.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="#" download class="btn btn2">Download </a>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="text" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+
+    <div class="bg-dark">
+      <div class="footer_section layout_padding">
+        <div class="container ">
+          <h1 class="text-center text-white mt-5 pt-3">Music</h1>
+
+          <div class="input_bt d-flex justify-content-evenly pad">
+            <input type="text" class="mail_bt w-25 " placeholder="Your Email" name="Your Email">
+            <span class="subscribe_bt  " id="basic-addon2"><a href="#">Subscribe</a></span>
+          </div>
+
+          <div class="footer_menu ">
+            <ul class="d-flex justify-content-center   ">
+              <li><a href="#">Top songs</a></li>
+              <li><a href="#">Artist</a></li>
+              <li><a href="#">New Releases</a></li>
+              <li><a href="#">playlist</a></li>
+              <li><a href="#">Customer Service</a></li>
+            </ul>
+          </div>
+          <div class="location_main d-flex justify-content-center text-white pt-2">Help Line Number : <a
+              href="#">+914545454545</a></div>
+        </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section pt-3">
+        <div class="container d-flex justify-content-center">
+          <p class="copyright_text  text-white">© 2020 All Rights Reserved. Design by
+            <a class="  btn-secondary disabled" href="https://tcrinnovation.co.in/">Music</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
